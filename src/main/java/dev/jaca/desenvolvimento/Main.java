@@ -26,8 +26,10 @@ public class Main {
                     person.displayData();
                     break;
                 case 2:
-                    // Chame o exercício 2 aqui
-                    System.out.println("Executando exercício 2...");
+                    System.out.println("Qual o tamanho em cm do lado do quadrado?");
+                    var lado = scanner.nextFloat();
+                    var area = lado * lado;
+                    System.out.println("A área do quadrado é: %s cm²".formatted(area));
                     break;
                 case 3:
                     // Chame o exercício 3 aqui

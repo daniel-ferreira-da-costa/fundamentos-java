@@ -1,5 +1,6 @@
 package dev.jaca.desenvolvimento;
 
+import java.util.List;
 import java.util.Scanner;
 
 import dev.jaca.desenvolvimento.answer1.Person;
@@ -22,9 +23,9 @@ public class Main {
 
             switch (opcao) {
                 case 1:
-                    Person person = new Person();
-                    person.inputData();
-                    person.displayData();
+                    Person case1_person = new Person();
+                    case1_person.inputData();
+                    case1_person.displayData();
                     break;
                 case 2:
                     System.out.println("Qual o tamanho em cm do lado do quadrado?");
@@ -41,24 +42,32 @@ public class Main {
                     System.out.println("A área do retângulo é: %s cm²".formatted(areaRetangulo));
                     break;
                 case 4:
-                    Person pessoa1 = new Person();
-                    Person pessoa2 = new Person();
+                    Person case4_pessoa1 = new Person();
+                    Person case4_pessoa2 = new Person();
                     System.out.println("Digite o nome da primeira pessoa:");
-                    pessoa1.setName(scanner.next());
+                    case4_pessoa1.setName(scanner.next());
                     System.out.println("Digite a idade da primeira pessoa:");
-                    pessoa1.setAge(scanner.nextInt());
+                    case4_pessoa1.setAge(scanner.nextInt());
 
                     System.out.println("Digite o nome da segunda pessoa:");
-                    pessoa2.setName(scanner.next());
+                    case4_pessoa2.setName(scanner.next());
                     System.out.println("Digite a idade da segunda pessoa:");
-                    pessoa2.setAge(scanner.nextInt());
+                    case4_pessoa2.setAge(scanner.nextInt());
 
-                    int diferencaIdade = Math.abs(pessoa1.getAge() - pessoa2.getAge());
+                    int diferencaIdade = Math.abs(case4_pessoa1.getAge() - case4_pessoa2.getAge());
                     System.out.println("A diferença de idade entre %s e %s é de %d anos."
-                            .formatted(pessoa1.getName(), pessoa2.getName(), diferencaIdade));
+                            .formatted(case4_pessoa1.getName(), case4_pessoa2.getName(), diferencaIdade));
                     break;
                 case 5:
-                    
+                    Person case5_pessoa1 = new Person();
+                    Person case5_pessoa2 = new Person();
+                    Person case5_pessoa3 = new Person();
+                    List<Person> case5_pessoas = List.of(case5_pessoa1, case5_pessoa2, case5_pessoa3);
+                    for (Person pessoa : case5_pessoas) {
+                        pessoa.inputData();
+                        pessoa.displayData();
+                    }
+                    Person.compareAge(case5_pessoa1, case5_pessoa2, case5_pessoa3);
                     break;
                 case 0:
                     System.out.println("Saindo do programa.");

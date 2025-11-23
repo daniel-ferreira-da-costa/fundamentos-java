@@ -32,8 +32,12 @@ public class Main {
                     System.out.println("A área do quadrado é: %s cm²".formatted(area));
                     break;
                 case 3:
-                    // Chame o exercício 3 aqui
-                    System.out.println("Executando exercício 3...");
+                    System.out.println("Qual a largura em cm do retângulo?");
+                    var largura = scanner.nextFloat();
+                    System.out.println("Qual a altura em cm do retângulo?");
+                    var altura = scanner.nextFloat();
+                    var areaRetangulo = largura * altura;
+                    System.out.println("A área do retângulo é: %s cm²".formatted(areaRetangulo));
                     break;
                 case 4:
                     // Chame o exercício 4 aqui

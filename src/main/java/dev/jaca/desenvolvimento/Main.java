@@ -40,8 +40,21 @@ public class Main {
                     System.out.println("A área do retângulo é: %s cm²".formatted(areaRetangulo));
                     break;
                 case 4:
-                    // Chame o exercício 4 aqui
-                    System.out.println("Executando exercício 4...");
+                    Person pessoa1 = new Person();
+                    Person pessoa2 = new Person();
+                    System.out.println("Digite o nome da primeira pessoa:");
+                    pessoa1.setName(scanner.next());
+                    System.out.println("Digite a idade da primeira pessoa:");
+                    pessoa1.setAge(scanner.nextInt());
+
+                    System.out.println("Digite o nome da segunda pessoa:");
+                    pessoa2.setName(scanner.next());
+                    System.out.println("Digite a idade da segunda pessoa:");
+                    pessoa2.setAge(scanner.nextInt());
+
+                    int diferencaIdade = Math.abs(pessoa1.getAge() - pessoa2.getAge());
+                    System.out.println("A diferença de idade entre %s e %s é de %d anos."
+                            .formatted(pessoa1.getName(), pessoa2.getName(), diferencaIdade));
                     break;
                 case 0:
                     System.out.println("Saindo do programa.");

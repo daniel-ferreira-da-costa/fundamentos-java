@@ -18,4 +18,9 @@ public class Person {
         System.out.print("Enter age: ");
         this.age = scanner.nextInt();
     }
+    
+    public void displayData() {
+        System.out.println("\n");
+        System.out.println("Hi %s, you are %d years old.".formatted(this.name, this.age));
+    }
 }

@@ -15,6 +15,7 @@ public class Main {
             System.out.println("2 - Área do quadrado");
             System.out.println("3 - Área do retângulo");
             System.out.println("4 - Diferença de idade entre duas pessoas");
+            System.out.println("5 - Comparar idade de tres pessoas");
             System.out.println("0 - Sair");
             System.out.print("Escolha uma opção: ");
             opcao = scanner.nextInt();
@@ -55,6 +56,9 @@ public class Main {
                     int diferencaIdade = Math.abs(pessoa1.getAge() - pessoa2.getAge());
                     System.out.println("A diferença de idade entre %s e %s é de %d anos."
                             .formatted(pessoa1.getName(), pessoa2.getName(), diferencaIdade));
+                    break;
+                case 5:
+                    
                     break;
                 case 0:
                     System.out.println("Saindo do programa.");

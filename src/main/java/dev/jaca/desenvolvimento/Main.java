@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import dev.jaca.desenvolvimento.answer1.Person;
+import lombok.experimental.var;
 
 public class Main {
     public static void main(String[] args) {
@@ -17,6 +18,7 @@ public class Main {
             System.out.println("3 - Área do retângulo");
             System.out.println("4 - Diferença de idade entre duas pessoas");
             System.out.println("5 - Comparar idade de tres pessoas");
+            System.out.println("6 - Formar triângulo com 3 lados diferentes");
             System.out.println("0 - Sair");
             System.out.print("Escolha uma opção: ");
             opcao = scanner.nextInt();
@@ -68,6 +70,29 @@ public class Main {
                         pessoa.displayData();
                     }
                     Person.compareAge(case5_pessoa1, case5_pessoa2, case5_pessoa3);
+                    break;
+                case 6:
+                    System.out.println("Formar triângulo com 3 lados diferentes em cm");
+                    System.out.println("Digite a base do triângulo: ");
+                    var base = scanner.nextFloat();
+                    System.out.println("Digite o tamanho do primeiro lado do triângulo: ");
+                    var lado1 = scanner.nextFloat();
+                    System.out.println("Digite o tamanho do segundo lado do triângulo: ");
+                    var lado2 = scanner.nextFloat();
+
+                    if (base + lado1 > lado2 && base + lado2 > lado1 && lado1 + lado2 > base) {
+                        System.out.println("Os lados formam um triângulo.");
+                        var perimetro = (base + lado1 + lado2)/2;
+                    System.out.println("O perímetro do triângulo é %s cm ".formatted(String.format("%.2f", perimetro)));
+                        var areaTriangulo = Math.sqrt(perimetro * (perimetro - base) * (perimetro - lado1) * (perimetro - lado2));
+                        System.out.println("A área do triângulo é %s cm²".formatted(String.format("%.2f", areaTriangulo)));
+                    } else {
+                        System.out.println("Os lados não formam um triângulo.");
+                        break;
+                    }
+
+
+
                     break;
                 case 0:
                     System.out.println("Saindo do programa.");

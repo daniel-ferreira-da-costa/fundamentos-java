@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import dev.jaca.desenvolvimento.answer1.Person;
+import dev.jaca.desenvolvimento.answer7.Student;
 import lombok.experimental.var;
 
 public class Main {
@@ -19,6 +20,7 @@ public class Main {
             System.out.println("4 - Diferença de idade entre duas pessoas");
             System.out.println("5 - Comparar idade de tres pessoas");
             System.out.println("6 - Formar triângulo com 3 lados diferentes");
+            System.out.println("7 - Média de notas de estudantes");
             System.out.println("0 - Sair");
             System.out.print("Escolha uma opção: ");
             opcao = scanner.nextInt();
@@ -90,9 +92,22 @@ public class Main {
                         System.out.println("Os lados não formam um triângulo.");
                         break;
                     }
+                    break;
+                case 7:
+                    Student student1 = new Student();
+                    student1.imputStudentData();
+                    System.out.println("A média das notas do estudante é: " + student1.calculateAverage());
+                    Student student2 = new Student();
+                    student2.imputStudentData();
+                    System.out.println("A média das notas do estudante é: " + student2.calculateAverage());
 
-
-
+                    if (student1.getAverage() == student2.getAverage()) {
+                        System.out.println("Both students have the same average.");  
+                        break;
+                    }
+                    
+                    String topStudent = student1.highetAverage(student1, student2);
+                    System.out.println("O estudante com a maior média é: " + topStudent);
                     break;
                 case 0:
                     System.out.println("Saindo do programa.");
